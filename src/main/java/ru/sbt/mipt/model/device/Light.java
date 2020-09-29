@@ -1,6 +1,6 @@
-package ru.sbt.mipt.oop;
+package ru.sbt.mipt.model.device;
 
-public class Light {
+public class Light implements Device, TurnableDevice {
     private boolean isOn;
     private final String id;
 
@@ -17,7 +17,7 @@ public class Light {
         return id;
     }
 
-    public void setOn(boolean on) {
-        isOn = on;
-    }
+
+    @Override
+    public void setOn(boolean on) {isOn = on;}
 }
